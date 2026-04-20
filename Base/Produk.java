@@ -17,7 +17,7 @@ public class Produk {
     public double getHarga(){
         return harga;
     }
-    public int getStock(){
+    public int getStok(){
         return stok;
     }
     public void setHarga(double harga){
@@ -26,12 +26,20 @@ public class Produk {
     public void setStok(int stok){
         this.stok = stok;
     }
+    public void kurangiStok(int jumlah){
+        if (jumlah > stok) {
+            System.out.println("Out of stock");
+        }else{
+            stok = stok - jumlah;
+        }
+
+
+    }
     
     public void tampilkanInfo(){
         System.out.println("Produk  :"+ nama);
         System.out.println("Harga   :"+ harga);
         System.out.println("Stok    :"+ stok);
-        System.out.println("=======================");
     }
 
 
