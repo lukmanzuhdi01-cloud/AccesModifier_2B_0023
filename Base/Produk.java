@@ -6,7 +6,7 @@ public class Produk {
     private int stok;
 
     //Construktor
-    public Produk(String nama, double harga, int stok, String kategori){
+    public Produk(String nama, double harga, int stok){
         this.nama = nama;
         this.harga = harga;
         this.stok = stok;
@@ -14,13 +14,18 @@ public class Produk {
     public String getNama(){
         return nama;
     }
-    public double getHaarga(){
+    public double getHarga(){
         return harga;
     }
     public int getStock(){
         return stok;
     }
-
+    public void setHarga(double harga){
+        this.harga = harga;
+    }
+    public void setStok(int stok){
+        this.stok = stok;
+    }
     
     public void tampilkanInfo(){
         System.out.println("Produk  :"+ nama);
