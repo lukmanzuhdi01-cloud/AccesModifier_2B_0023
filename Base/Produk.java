@@ -32,9 +32,25 @@ public class Produk {
         }else{
             stok = stok - jumlah;
         }
-
-
     }
+
+    public double hitungTotalHarga(int jumlah){
+        return harga * jumlah;
+    }
+
+    public void beli (int jumlahBeli){
+        if (jumlahBeli <= 0){
+            System.out.println("Jumlah beli harus lebih dari 0!");
+        }
+        if (jumlahBeli > stok){
+            System.out.println("stok "+ nama +"tidak cukup! tersisa: " + stok);
+            return;
+        }
+
+        stok -= jumlahBeli;
+    }
+
+    
     
     public void tampilkanInfo(){
         System.out.println("Produk  :"+ nama);
